@@ -1,0 +1,78 @@
+<html>
+<center><h1><b>Selection Sort</b></h1></center>
+<p><h3>The selection sort algorithm sorts an array by repeatedly finding the minimum element from unsorted part and putting it at the beginning.</h3></p>
+<h1>Python Code and complexity of Selection Sort</h1>
+<style>
+
+body{
+	background-image: url('/static/image/water.jpg');
+  	background-repeat: no-repeat; 
+ 	background-attachment: fixed;
+  	background-size: cover;
+  	width: 100%;
+    height: 100%
+	border:solid black 2px; 
+}
+
+.form-tip{
+	background-image: url('/static/image/water.jpg');
+	background-repeat: no-repeat; 
+ 	background-attachment: fixed;
+  	background-size: cover; 	
+}
+
+</style>
+
+<body>
+
+<table class="form-tip" align="left" border="2" width="100%">
+	<tr>
+	<th>
+		<td>
+<pre><h3>
+def stableSelectionSort(a, n): 	
+	for i in range(n): 
+		min_idx = i 
+		for j in range(i + 1, n): 
+			if a[min_idx] > a[j]: 
+				min_idx = j 
+		key = a[min_idx] 
+		while min_idx > i: 
+			a[min_idx] = a[min_idx - 1] 
+			min_idx -= 1
+		a[i] = key 
+
+a = [4, 5, 3, 2, 4, 1] 
+n = len(a) 
+stableSelectionSort(a, n) 
+
+for i in range(n):
+	print(a[i],end=" ")  	
+</h3>
+</pre>
+</td>
+</th>
+<th class="form-pip">
+	<td>
+		<p><b><h1><center>Complexity:</center></h1></b></p>
+	<p>
+<ol>			
+<h2><li>Worst and Average Case Time Complexity: O(n*n)</li></h2>
+<h2><li>Best Case Time Complexity: O(n*n)</li></h2>
+<h2><li>Auxiliary Space: O(1)</li></h2>
+<h2><li>Sorting In Place: Yes</li></h2>
+<h2><li>Stable: No</li></h2>
+</ol>
+</p>	
+</td>
+</th>
+</tr>
+
+</table>
+<div style="width: 640px;height: 480px;float: left;margin-left:20%;border: solid black 3px;margin-top:10%;margin-bottom:5%;">
+		<video width=100% height="100%" controls>
+			<source src="/static/video/selection.mp4" type="video/mp4">
+		</video>
+</div>
+</body>
+</html>

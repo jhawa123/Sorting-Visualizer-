@@ -1,0 +1,148 @@
+<html>
+<head>
+  <title>Sorting Visualization</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/style.css')}}">
+</head>
+<style>
+
+::placeholder{
+  color:black;
+}  
+
+body{
+  background-image: url('/static/image/sun.jpg');
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  background-size: cover; 
+}
+
+.form-hor{
+   color: black;
+   background-color: white;
+  
+}
+.form-koko{
+   color: white;
+   height: 30px;
+   background-color: black;
+  
+}
+.form-ver{
+  color:black;
+  background-color: white;
+  
+}
+
+.form-lisi{
+  
+  margin-left: 25px;
+}
+
+.form-tab{
+  margin-left: 50px;
+  margin-bottom:50px;
+}
+.main{
+  width: 100%;
+  height: 60px;
+  background: black;
+}
+hr{
+  border-color:black;
+}
+
+
+</style>
+
+
+<body>
+
+  <header>
+    <div class="main">
+      <div>
+        <img src="/static/image/sortlogo.png" style="height: 20px;width: 20px;float:left;margin:1%;">
+        <h1 style="float:left;margin:0.5%;color:white">Sorting Visualizer</h1>
+      </div>
+      <ul>
+        <li> <a href="/static/web/bubblesort.html" target="_blank">Bubble Sort</a> </li>
+        <li> <a href="/static/web/selectionsort.html" target="_blank">Selection Sort</a> </li>
+        <li> <a href="/static/web/insertionsort.html" target="_blank">Insertion Sort</a> </li>
+        <li> <a href="/static/web/mergesort.html" target="_blank">Merge Sort</a> </li>
+        <li> <a href="/static/web/quicksort.html" target="_blank">Quick Sort</a> </li>
+      </ul>
+    </div>  
+  </header>
+
+<br>
+
+<b><h1><center>Sorting Visualization</center></h1></b>
+<hr>
+<br>
+
+<div class="form-lisi">
+<ol>
+  
+    <p><h3><li>A sorting algorithm is an algorithm that organizes elements of a sequence in a certain order.<br>
+We discuss in ascending order. The reason behind this is not only the need of solving a very common<br>
+task but also the challenge of solving a complex problem in the most efficient way.</li></h3></p>
+ 
+<br>
+  <p><h3><li>SORTING is an attempt to visualize and help to understand how some of the most famous sorting algorithms work.<br>
+This project covers bubble,selection,insertion,merge,quick sort.<br>
+This project provides visuals representations that how sorting algorithms work.</li></h3></p>
+</ol>
+</div>
+
+<table class="form-tab" align="center" background="/static/image/sun.jpg" border="10"  style="width:45%; margin-left:20%;" >
+<tr>
+  <td>
+    <br>
+    <br>
+    <br>
+<table  border="1" height=120 align="center" style="width:80%">
+<center><h1><b style="color:black;">Python Sorting Visualizer</b></h1></center>
+  <hr>
+<form action="http://localhost:2000/sortvis" method="POST">
+  <tr>
+    <td>
+  <label class="form-ver" for="array length"><b>Enter Length of array : </b></label>
+    </td>
+    <td>
+  <input class="form-hor" type="text" placeholder="Enter number <100" name="array length">
+    </td>
+  </tr>  
+  <br>
+  <tr>
+    <td>
+  <label class="form-ver" for="sort"><b>Choose a Sorting technique : </b></label>
+    </td>
+    <td>
+  <select class="form-hor" id="sort" name="sort">
+    <option name="sort" value="bubble">Bubble</option>
+    <option name="sort" value="selection">Selection</option>
+    <option name="sort" value="insertion">Insertion</option>
+    <option name="sort" value="merge">Merge</option>
+    <option name="sort" value="quick">Quick</option>
+    <option name="sort" value="heap"> Heap </option>
+  </select>
+    </td>
+  </tr>  
+  
+  </table>
+</tr>
+<br>
+<br>
+</td>
+<tr>
+  <td>
+    <br>
+  <button class="form-koko" type="submit" align="center" style="width:25%" style="height: 30px" style="width:30%">Sorting</button>
+  <br>
+</td>
+</tr>
+<br>
+</form>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<html>
+<center><h1><b>Merge Sort</b></h1></center>
+<p><h3>Merge sort is a divide-and-conquer algorithm based on the idea of breaking down a list into several sub-lists until each sublist consists of a single element and merging those sublists in a manner that results into a sorted list.</h3></p>
+<h1>Python Code and complexity of Merge Sort.</h1>
+<style>
+
+body{
+	background-image: url('/static/image/water.jpg');
+  	background-repeat: no-repeat; 
+ 	background-attachment: fixed;
+  	background-size: cover; 
+  	width: 100%;
+    height: 100%
+	border:solid black 2px;
+}
+
+.form-tip{
+	background-image: url(water.jpg);
+	background-repeat: no-repeat; 
+ 	background-attachment: fixed;
+  	background-size: cover; 
+	
+	
+	background-color: lightblue;
+}
+
+</style>
+
+<body>
+
+<table class="form-tip" align="left" border="2" width="100%">
+	<tr>
+	<th>
+		<td>
+<pre><h3>
+def mergeSort(arr): 
+	if len(arr) >1: 
+		mid = len(arr)//2 
+		L = arr[:mid]
+		R = arr[mid:]
+		mergeSort(L) 
+		mergeSort(R)
+		i = j = k = 0
+        while i < len(L) and j < len(R): 
+			if L[i] < R[j]: 
+				arr[k] = L[i] 
+				i+=1
+			else: 
+				arr[k] = R[j] 
+				j+=1
+			k+=1 
+		while i < len(L): 
+			arr[k] = L[i] 
+			i+=1
+			k+=1		
+		while j < len(R): 
+			arr[k] = R[j] 
+			j+=1
+			k+=1
+if __name__ == '__main__': 
+	arr = [12, 11, 13, 5, 6, 7] 
+	mergeSort(arr) 
+	print("Sorted array is: ", end="\n") 
+	for i in range(len(arr)):		 
+		print(arr[i],end=" ") 	 
+</h3>
+</pre>
+</td>
+</th>
+<th class="form-pip">
+	<td>
+		<p><b><h1><center>Complexity:</center></h1></b></p>
+	<p>
+<ol>			
+<h2><li>Worst and Average Case Time Complexity: O(n*log(n))</li></h2>
+<h2><li>Best Case Time Complexity: O(n*log(n))</li></h2>
+<h2><li>Auxiliary Space: O(n)</li></h2>
+<h2><li>Sorting In Place: No</li></h2>
+<h2><li>Stable: Yes</li></h2>
+</ol>
+</p>	
+</td>
+</th>
+</tr>
+
+</table>
+<div style="width: 640px;height: 480px;float: left;margin-left:20%;border: solid black 3px;margin-top:10%;margin-bottom:5%;">
+		<video width=100% height="100%" controls>
+			<source src="/static/video/merge.mp4" type="video/mp4">
+		</video>
+	</div>
+</body>
+</html>
