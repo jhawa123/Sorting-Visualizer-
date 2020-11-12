@@ -6,6 +6,7 @@ Python sorting visual displayer
 ![heap](https://user-images.githubusercontent.com/55794946/98978930-a9182a80-2540-11eb-8963-09643d6baed2.gif)
 ![insertion](https://user-images.githubusercontent.com/55794946/98979489-6dca2b80-2541-11eb-8ec7-fec87a50c96e.gif)
 ![merge](https://user-images.githubusercontent.com/55794946/98979716-b2ee5d80-2541-11eb-94a6-e72778feeeab.gif)
+![quick](https://user-images.githubusercontent.com/55794946/98979999-14aec780-2542-11eb-9c32-c7548dc07516.gif)
 
 
 
